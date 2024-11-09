@@ -1,5 +1,5 @@
 """
-Setup file for eox_core Django plugin.
+Setup file for tox_core Django plugin.
 """
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -79,7 +79,7 @@ setup(
     include_package_data=True,
     entry_points={
         "lms.djangoapp": [
-            "tox_core = tox_core.apps:EoxCoreConfig",
+            "tox_core = tox_core.apps:ToxCoreConfig",
         ],
         "cms.djangoapp": [
             "tox_core = tox_core.apps:ToxCoreCMSConfig",

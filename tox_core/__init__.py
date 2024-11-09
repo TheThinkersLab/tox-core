@@ -1,4 +1,4 @@
 """
-Init for main eox-core app
+Init for main tox-core app
 """
 __version__ = '1.0.0'

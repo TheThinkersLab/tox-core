@@ -1,5 +1,5 @@
 """
-Settings for eox-core
+Settings for tox-core
 """
 
 from __future__ import absolute_import, unicode_literals
@@ -18,7 +18,7 @@ class SettingsClass:
 
 def plugin_settings(settings):  # pylint: disable=function-redefined
     """
-    Defines eox-core settings when app is used as a plugin to edx-platform.
+    Defines tox-core settings when app is used as a plugin to edx-platform.
     See: https://github.com/openedx/edx-platform/blob/master/openedx/core/djangoapps/plugins/README.rst
     """
 
@@ -35,7 +35,8 @@ plugin_settings(SETTINGS)
 vars().update(SETTINGS.__dict__)
 
 
-ROOT_URLCONF = 'eox_core.urls'
+INSTALLED_APPS += ('tox_core',)
+ROOT_URLCONF = 'tox_core.urls'
 ALLOWED_HOSTS = ['*']
 
 # This key needs to be defined so that the check_apps_ready passes and the
