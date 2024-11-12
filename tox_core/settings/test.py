@@ -35,7 +35,7 @@ plugin_settings(SETTINGS)
 vars().update(SETTINGS.__dict__)
 
 
-INSTALLED_APPS += ('tox_core',)  # noqa
+INSTALLED_APPS += ('tox_core',)
 ROOT_URLCONF = 'tox_core.urls'
 ALLOWED_HOSTS = ['*']
 

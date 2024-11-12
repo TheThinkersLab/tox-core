@@ -3,7 +3,12 @@ Settings for eox-core
 """
 from __future__ import absolute_import, unicode_literals
 
-from importlib.util import find_spec
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+)
 
 SECRET_KEY = 'a-not-to-be-trusted-secret-key'
 

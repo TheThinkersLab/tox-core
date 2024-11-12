@@ -23,8 +23,6 @@ class ToxCoreConfig(AppConfig):
             'lms.djangoapp': {
                 'test': {'relative_path': 'settings.test'},
                 'common': {'relative_path': 'settings.common'},
-                'production': {'relative_path': 'settings.production'},
-                'devstack': {'relative_path': 'settings.devstack'},
             },
         },
     }
@@ -47,7 +45,6 @@ class ToxCoreCMSConfig(ToxCoreConfig):
             'cms.djangoapp': {
                 'test': {'relative_path': 'settings.test'},
                 'common': {'relative_path': 'settings.common'},
-                'production': {'relative_path': 'settings.production'},
             },
         },
     }
