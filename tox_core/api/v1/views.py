@@ -6,6 +6,7 @@ from django.db.models import Q
 from rest_framework.generics import ListAPIView
 from rest_framework.throttling import AnonRateThrottle
 
+from lms.djangoapps.course_api.serializers import CourseKeySerializer
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 
 
@@ -40,7 +41,9 @@ class CourseIdListView(ListAPIView):
             "course-v1:edX+DemoX+Demo_Course"
         ]
     """
+    serializer_class = CourseKeySerializer
     throttle_classes = (CourseIdListAnonThrottle,)
+    pagination_class = None
 
     def get_queryset(self):
         """
