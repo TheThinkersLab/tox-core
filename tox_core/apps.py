@@ -27,6 +27,10 @@ class ToxCoreConfig(AppConfig):
         },
     }
 
+    def ready(self):
+        # Import signal handlers
+        from . import signals  # noqa
+
 
 class ToxCoreCMSConfig(ToxCoreConfig):
     """App configuration"""
@@ -48,3 +52,7 @@ class ToxCoreCMSConfig(ToxCoreConfig):
             },
         },
     }
+
+    def ready(self):
+        # Import signal handlers
+        from . import signals  # noqa
